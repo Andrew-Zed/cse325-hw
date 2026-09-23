@@ -6,7 +6,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Andrew Awadike Movie Collection</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -19,6 +19,16 @@
         </select>
 
         <label>Title: <input type="text" name="SearchString" /></label>
+
+        <select name="releaseYear">
+            <option value="">All Years</option>
+            <option value="1980">1980+</option>
+            <option value="1990">1990+</option>
+            <option value="2000">2000+</option>
+            <option value="2010">2010+</option>
+            <option value="2020">2020+</option>
+        </select>
+
         <input type="submit" value="Filter" />
     </p>
 </form>

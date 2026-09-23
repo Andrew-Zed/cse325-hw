@@ -33,7 +33,7 @@ public static class SeedData
                     Title = "Ghostbusters ",
                     ReleaseDate = DateTime.Parse("1984-3-13"),
                     Genre = "Comedy",
-                    Rating = "R",
+                    Rating = "G",
                     Price = 8.99M
                 },
                 new Movie
@@ -41,7 +41,7 @@ public static class SeedData
                     Title = "Ghostbusters 2",
                     ReleaseDate = DateTime.Parse("1986-2-23"),
                     Genre = "Comedy",
-                    Rating = "R",
+                    Rating = "PG-13",
                     Price = 9.99M
                 },
                 new Movie
@@ -51,6 +51,30 @@ public static class SeedData
                     Genre = "Western",
                     Rating = "R",
                     Price = 3.99M
+                },
+                new Movie
+                {
+                    Title = "The Dark Knight",
+                    ReleaseDate = DateTime.Parse("2008-07-18"),
+                    Genre = "Action",
+                    Price = 14.99M,
+                    Rating = "PG-13"
+                },
+                new Movie
+                {
+                    Title = "Interstellar",
+                    ReleaseDate = DateTime.Parse("2014-11-07"),
+                    Genre = "Science Fiction",
+                    Price = 15.99M,
+                    Rating = "PG-13"
+                },
+                new Movie
+                {
+                    Title = "Inception",
+                    ReleaseDate = DateTime.Parse("2010-07-16"),
+                    Genre = "Science Fiction",
+                    Price = 13.99M,
+                    Rating = "PG-13"
                 }
             );
             context.SaveChanges();
