@@ -1,0 +1,43 @@
+@page "/data-binding"
+
+<h1>Data binding examples</h1>
+
+<p>
+    Your email address is:
+    <input @bind="customerEmail" />
+</p>
+
+<p>
+    Favorite pizza: <strong>@favoritePizza</strong>
+    <input @bind-value="favoritePizza" @bind-value:event="oninput" />
+</p>
+
+<p>
+    Birthday:
+    <input type="date" @bind="birthday" @bind:format="dd-MM-yyyy" />
+    <span>@birthday.ToString("dd-MM-yyyy")</span>
+</p>
+
+<p>
+    Approval rating: <strong>@ApprovalRating</strong>
+    <input type="number" step="0.001" @bind="ApprovalRating" />
+</p>
+
+@code {
+    private string customerEmail = "user@contoso.com";
+    private string favoritePizza = "Margherita";
+    private DateTime birthday = new(2000, 1, 1);
+    private decimal approvalRating = 1.0m;
+
+    private string ApprovalRating
+    {
+        get => approvalRating.ToString("0.000");
+        set
+        {
+            if (decimal.TryParse(value, out var number))
+            {
+                approvalRating = Math.Round(number, 3);
+            }
+        }
+    }
+}

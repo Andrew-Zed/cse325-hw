@@ -1,0 +1,12 @@
+<article class="pizza-card-demo">
+    <h2>New Pizza: @PizzaName</h2>
+    <p>@PizzaDescription</p>
+</article>
+
+@code {
+    [Parameter]
+    public string PizzaName { get; set; } = string.Empty;
+
+    [Parameter]
+    public string PizzaDescription { get; set; } = "The best pizza you've ever tasted.";
+}

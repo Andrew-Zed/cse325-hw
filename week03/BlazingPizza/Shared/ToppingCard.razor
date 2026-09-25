@@ -1,0 +1,9 @@
+<article class="pizza-card-demo">
+    <h2>New Topping: @Topping.Name</h2>
+    <p>Ingredients: @Topping.Ingredients</p>
+</article>
+
+@code {
+    [Parameter]
+    public PizzaToppingInfo Topping { get; set; } = new();
+}

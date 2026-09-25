@@ -1,0 +1,11 @@
+@page "/specialoffers"
+
+<h1>Special Offers</h1>
+
+<CascadingValue Name="DealName" Value="@dealName">
+    <DealDisplay />
+</CascadingValue>
+
+@code {
+    private string dealName = "Throwback Thursday";
+}
