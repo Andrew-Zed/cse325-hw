@@ -46,23 +46,9 @@ form {
 
 .content {
     display: flex;
-    min-height: calc(100vh - 8rem);
+    height: 100%;
     z-index: 1;
     background-color: white;
-}
-
-.site-footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1029;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.65rem 3rem;
-    background-color: #222;
-    color: white;
-    font-size: 0.85rem;
 }
 
 .main {
@@ -213,7 +199,7 @@ form {
     }
 
 .price::before {
-    content: '₦';
+    content: '£';
     font-weight: 300;
     font-size: 1.2rem;
     margin-right: 0.2rem;
@@ -265,7 +251,7 @@ form {
     }
 
         .order-total .total-price::before {
-            content: '₦';
+            content: '£';
             font-weight: 300;
             margin: 0 0.1rem 0 0.4rem;
         }
@@ -322,7 +308,7 @@ form {
 }
 
     .item-price::before {
-        content: '₦';
+        content: '£';
         font-weight: 100;
         margin-right: 0.3rem;
     }
@@ -469,7 +455,7 @@ form {
 }
 
 .dialog .topping-price::before {
-    content: '₦';
+    content: '£';
 }
 
 .delete-topping {

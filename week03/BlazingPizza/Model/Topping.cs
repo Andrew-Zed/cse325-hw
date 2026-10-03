@@ -8,6 +8,6 @@
 
         public decimal Price { get; set; }
 
-        public string GetFormattedPrice() => $"₦{Price:0.00}";
+        public string GetFormattedPrice() => Price.ToString("0.00");
     }
 }
